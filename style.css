@@ -1,0 +1,270 @@
+/* ================= GLOBAL SETTINGS ================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: rgb(0,0,0);
+    color: white;
+    font-family: 'Roboto', Arial, sans-serif; /* simpler, professional font */
+    scroll-behavior: smooth;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+fieldset {
+    border: 1px solid white;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+section {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* ================= HEADER ================= */
+header section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+header section .image-container {
+    flex: 0 0 150px;
+    height: 150px;
+}
+
+header section .image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 20%;
+    border: 3px solid white;
+    transition: all 0.3s ease-in-out;
+}
+
+header section .image-container img:hover {
+    border-color: blueviolet;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px blueviolet;
+}
+
+header section .name-container {
+    flex: 1;
+    text-align: center;
+}
+
+header section .information-container {
+    flex: 1;
+    text-align: center;
+}
+
+header section .information-container p,
+header section .information-container a {
+    margin: 5px 0;
+}
+
+/* ================= EXPERIENCE ================= */
+.exp-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.exp-logo {
+    flex: 0 0 120px;
+    max-width: 120px;
+}
+
+.exp-logo img {
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+    border-radius: 10px;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+}
+
+.exp-logo img:hover {
+    transform: scale(1.08);
+    border-color: blueviolet;
+    box-shadow: 0 0 15px blueviolet;
+}
+
+.exp-details {
+    flex: 1;
+}
+
+.exp-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.exp-details .job-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ================= EDUCATION ================= */
+.edu-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.edu-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+}
+
+.edu-logo:hover {
+    transform: scale(1.08);
+    border: 2px solid blueviolet;
+    box-shadow: 0 0 15px blueviolet;
+}
+
+.edu-text h4 {
+    margin-bottom: 5px;
+}
+
+/* ================= SKILLS ================= */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* ================= TOOLS TABLE ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(50,50,50);
+}
+
+/* ================= CONTACT FORM ================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: purple;
+    transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    header section {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header section {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    header section .image-container {
+        flex: 0 0 120px;
+        height: 120px;
+    }
+
+    header section .name-container,
+    header section .information-container {
+        text-align: center;
+        flex: unset;
+    }
+
+    header section .information-container p,
+    header section .information-container a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .exp-item {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .edu-item {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
