@@ -255,7 +255,7 @@ header section {
   overflow: hidden; white-space: nowrap;
   border-right: 2px solid var(--c);
   max-width: 0;
-  animation: type 2.2s steps(42,end) .8s forwards, blink .75s step-end infinite;
+  animation: type 2.2s steps(33,end) .8s forwards, blink .75s step-end infinite;
 }
 @keyframes type  { to { max-width: 360px; } }
 @keyframes blink { 50% { border-color: transparent; } }
@@ -308,6 +308,7 @@ header section {
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   opacity: 0; transition: opacity .35s ease;
+  pointer-events: none;
 }
 .card-box:hover::before { opacity: 1; }
 
@@ -443,6 +444,7 @@ header section {
   box-shadow: 0 0 24px var(--gv), 0 0 48px var(--gv);
   transform: scale(1.06) rotate(-2deg);
 }
+.exp-logo a { display: block; line-height: 0; }
 
 .exp-details { flex: 1; }
 .exp-details h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
@@ -591,6 +593,7 @@ tr:hover td { background: var(--glass); color: var(--text); }
   transition: var(--tr);
 }
 .edu-item:last-child { border-bottom: none; }
+.edu-item > a { display: block; line-height: 0; flex-shrink: 0; }
 .edu-logo {
   width: 72px; height: 72px; flex-shrink: 0;
   border-radius: var(--r); object-fit: contain;
