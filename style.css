@@ -730,6 +730,97 @@ tr:hover td { background: var(--glass); color: var(--text); }
 .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 36px var(--gv); filter: brightness(1.1); }
 
 /* ============================================================
+   MUSIC SECTION
+   ============================================================ */
+.music-card {
+  background: linear-gradient(160deg, var(--card) 0%, rgba(139,92,246,.06) 50%, var(--card) 100%);
+}
+
+/* Animated soundwave bars in the header */
+.soundwave {
+  display: flex; align-items: flex-end; gap: 3px; height: 22px; flex-shrink: 0;
+}
+.soundwave span {
+  display: inline-block; width: 3px; border-radius: 2px;
+  background: linear-gradient(to top, var(--v), var(--c));
+  animation: soundwave-bar 1.2s ease-in-out infinite;
+}
+.soundwave span:nth-child(1) { animation-delay: 0.00s; }
+.soundwave span:nth-child(2) { animation-delay: 0.10s; }
+.soundwave span:nth-child(3) { animation-delay: 0.20s; }
+.soundwave span:nth-child(4) { animation-delay: 0.30s; }
+.soundwave span:nth-child(5) { animation-delay: 0.15s; }
+.soundwave span:nth-child(6) { animation-delay: 0.25s; }
+.soundwave span:nth-child(7) { animation-delay: 0.05s; }
+.soundwave span:nth-child(8) { animation-delay: 0.35s; }
+.soundwave span:nth-child(9) { animation-delay: 0.18s; }
+@keyframes soundwave-bar {
+  0%, 100% { height: 5px; opacity: .55; }
+  50%       { height: 22px; opacity: 1; }
+}
+
+.music-top { margin-bottom: 24px; }
+
+.music-genre-row {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;
+}
+.music-genre-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: .72rem; font-weight: 600;
+  padding: 5px 14px; border-radius: 50px;
+  background: rgba(139,92,246,.12); border: 1px solid rgba(139,92,246,.35);
+  color: var(--v); transition: var(--tr); cursor: default;
+}
+.music-genre-tag:hover { transform: translateY(-2px); box-shadow: 0 0 18px var(--gv); background: rgba(139,92,246,.22); }
+
+.now-playing-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'JetBrains Mono', monospace; font-size: .68rem;
+  padding: 5px 13px; border-radius: 50px;
+  background: rgba(255,85,0,.1); border: 1px solid rgba(255,85,0,.3);
+  color: #ff7733; cursor: default;
+}
+.np-dot {
+  width: 7px; height: 7px; border-radius: 50%; display: inline-block;
+  background: #ff5500; box-shadow: 0 0 8px rgba(255,85,0,.8);
+  animation: np-pulse 1.5s ease-in-out infinite;
+}
+@keyframes np-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .5; transform: scale(.7); }
+}
+
+.music-bio {
+  font-size: .9rem; color: var(--text2); line-height: 1.75; max-width: 780px;
+}
+
+.music-player-wrap {
+  border-radius: var(--r-lg); overflow: hidden;
+  border: 1px solid rgba(139,92,246,.4);
+  box-shadow: 0 0 40px rgba(139,92,246,.18), 0 8px 32px rgba(0,0,0,.4);
+  transition: box-shadow .35s ease;
+  margin-bottom: 22px;
+}
+.music-player-wrap:hover {
+  box-shadow: 0 0 70px rgba(139,92,246,.28), 0 0 30px rgba(6,182,212,.12), 0 8px 40px rgba(0,0,0,.5);
+}
+.music-player-wrap iframe { display: block; }
+
+.music-actions { display: flex; justify-content: center; }
+.music-sc-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 28px; border-radius: 50px;
+  background: rgba(255,85,0,.1); border: 1px solid rgba(255,85,0,.4);
+  color: #ff6622 !important; font-weight: 600; font-size: .88rem;
+  transition: var(--tr); text-decoration: none !important;
+  backdrop-filter: blur(8px);
+}
+.music-sc-link:hover {
+  background: rgba(255,85,0,.22); transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255,85,0,.25);
+  text-decoration: none !important; color: #ff7744 !important;
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 footer {
