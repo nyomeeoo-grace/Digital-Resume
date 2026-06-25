@@ -99,7 +99,7 @@
       <div class="pillar-card tilt-card anim">
         <div class="pillar-icon">⚡</div>
         <h3>Technology &amp; AI</h3>
-        <p>Full-stack engineer who built mission-critical healthcare finance systems serving 100K+ patients daily, and led cloud migration to AWS under Singapore's GCC initiative.</p>
+        <p>Full-stack software engineer who built mission-critical healthcare finance systems serving 100K+ patients daily, and led cloud migration to AWS under Singapore's GCC initiative.</p>
         <div class="pillar-tags">
           <span class="ptag a">C# / .NET</span>
           <span class="ptag a">Python</span>
@@ -444,7 +444,7 @@
           <a href="https://www.springboard.com/about/" target="_blank" rel="noopener"><img src="./logos/springboard.jpeg" alt="Springboard" class="edu-logo"></a>
           <div class="edu-text">
             <h4><a href="https://www.springboard.com/about/">SPRINGBOARD</a></h4>
-            <p class="edu-degree"><em>Software Engineering Career Bootcamp</em><span class="edu-date">Jan 2026 – May 2026</span></p>
+            <p class="edu-degree"><em>Software Engineering Career Bootcamp</em><span class="edu-date">JAN 2026 – MAY 2026</span></p>
           </div>
         </div>
 
@@ -452,7 +452,7 @@
           <a href="https://nus.edu.sg/about" target="_blank" rel="noopener"><img src="./logos/nus.png" alt="NUS" class="edu-logo"></a>
           <div class="edu-text">
             <h4><a href="https://nus.edu.sg/about">NATIONAL UNIVERSITY OF SINGAPORE</a></h4>
-            <p class="edu-degree"><em>Graduate Diploma in Systems Analysis</em><span class="edu-date">Jul 2019 - Sep 2020</span></p>
+            <p class="edu-degree"><em>Graduate Diploma in Systems Analysis</em><span class="edu-date">JUL 2019 - SEP 2020</span></p>
           </div>
         </div>
 
@@ -460,7 +460,7 @@
           <a href="https://www.yude.edu.mm" target="_blank" rel="noopener"><img src="./logos/yude.jpg" alt="YUDE" class="edu-logo"></a>
           <div class="edu-text">
             <h4><a href="https://www.yude.edu.mm">YANGON UNIVERSITY OF DISTANCE EDUCATION</a></h4>
-            <p class="edu-degree"><em>Bachelor of Arts in English</em><span class="edu-date">Nov 2014 - Nov 2017</span></p>
+            <p class="edu-degree"><em>Bachelor of Arts in English</em><span class="edu-date">NOV 2014 - NOV 2017</span></p>
           </div>
         </div>
 
@@ -468,7 +468,7 @@
           <a href="https://www.stiedu.net" target="_blank" rel="noopener"><img src="./logos/sti.jpeg" alt="STI Myanmar" class="edu-logo"></a>
           <div class="edu-text">
             <h4><a href="https://www.stiedu.net">STI MYANMAR UNIVERSITY</a></h4>
-            <p class="edu-degree"><em>Diploma in Business Management</em><span class="edu-date">Mar 2017 - Nov 2017</span></p>
+            <p class="edu-degree"><em>Diploma in Business Management</em><span class="edu-date">MAR 2017 - NOV 2017</span></p>
           </div>
         </div>
 
@@ -483,6 +483,13 @@
           <div class="header-line"></div>
         </div>
         <ol class="ach-list">
+          <li>
+            <p class="ach-title">
+              DUR3 Champion &nbsp;·&nbsp; <i>Amazon, DUR3 (Milpitas, CA)</i>
+              <span class="ach-date">MAR 2026</span>
+            </p>
+            <p>Recognized for the demonstrating the Ownership Leadership Principle through contribution to associate engagement, swag order management, and workplace culture.</p>
+          </li>
           <li>
             <p class="ach-title">
               Healthcare Award — Top Delivered Project &nbsp;·&nbsp; <i>NCS Group, Singapore</i>
@@ -623,6 +630,21 @@
 
   <!-- ════════════════ JAVASCRIPT ════════════════ -->
   <script>
+    /* ── Typewriter ── */
+    (function () {
+      var el   = document.querySelector('.typewriter');
+      var full = el.textContent;
+      el.textContent = '';
+      var i = 0;
+      setTimeout(function () {
+        var timer = setInterval(function () {
+          i++;
+          el.textContent = full.slice(0, i);
+          if (i >= full.length) clearInterval(timer);
+        }, 60);
+      }, 800);
+    })();
+
     /* ── Theme Toggle ── */
     const html        = document.documentElement;
     const toggleBtn   = document.getElementById('theme-toggle');
