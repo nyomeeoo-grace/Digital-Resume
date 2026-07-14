@@ -314,6 +314,12 @@ header section {
   padding: 4px; transition: var(--tr);
 }
 .exp-logo a:hover .exp-logo-mark { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 20px var(--ga); }
+.exp-logo-img {
+  display: block; width: 76px; height: 76px; border-radius: var(--r);
+  object-fit: contain; background: var(--bg2);
+  padding: 10px; border: 1px solid var(--border); transition: var(--tr);
+}
+.exp-logo a:hover .exp-logo-img { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 20px var(--ga); }
 
 .exp-details { flex: 1; }
 .exp-details h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 4px; }
@@ -442,6 +448,13 @@ header section {
   transition: var(--tr);
 }
 .edu-item > a:hover .edu-logo-mark { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 20px var(--ga); }
+.edu-logo-img {
+  display: block; width: 60px; height: 60px; flex-shrink: 0;
+  border-radius: var(--r); object-fit: contain;
+  background: var(--bg2); padding: 7px;
+  border: 1px solid var(--border); transition: var(--tr);
+}
+.edu-item > a:hover .edu-logo-img { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 20px var(--ga); }
 .edu-text h4 { font-size: .95rem; font-weight: 600; margin-bottom: 5px; }
 .edu-text h4 a { color: var(--text); }
 .edu-text h4 a:hover { color: var(--accent); text-decoration: none; }
