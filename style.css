@@ -304,16 +304,21 @@ header section {
 .exp-item.hidden     { display: none; }
 
 .exp-logo { flex: 0 0 76px; }
+.exp-logo a { display: block; }
 .exp-logo-mark {
   width: 76px; height: 76px; border-radius: var(--r);
   display: flex; align-items: center; justify-content: center;
   background: var(--ga); border: 1px solid var(--border);
   font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 1.15rem;
   color: var(--accent); text-align: center; line-height: 1.15;
+  padding: 4px; transition: var(--tr);
 }
+.exp-logo a:hover .exp-logo-mark { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 20px var(--ga); }
 
 .exp-details { flex: 1; }
 .exp-details h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 4px; }
+.exp-details h3 a { color: var(--text); }
+.exp-details h3 a:hover { color: var(--accent); text-decoration: none; }
 
 .exp-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
 .badge {
@@ -426,6 +431,7 @@ header section {
   padding: 18px 0; border-bottom: 1px solid var(--border);
 }
 .edu-item:last-child { border-bottom: none; }
+.edu-item > a { display: block; flex-shrink: 0; }
 .edu-logo-mark {
   width: 60px; height: 60px; flex-shrink: 0;
   border-radius: var(--r);
@@ -433,8 +439,12 @@ header section {
   display: flex; align-items: center; justify-content: center;
   font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: .95rem;
   color: var(--accent); text-align: center; line-height: 1.1;
+  transition: var(--tr);
 }
+.edu-item > a:hover .edu-logo-mark { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 20px var(--ga); }
 .edu-text h4 { font-size: .95rem; font-weight: 600; margin-bottom: 5px; }
+.edu-text h4 a { color: var(--text); }
+.edu-text h4 a:hover { color: var(--accent); text-decoration: none; }
 .edu-degree { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: .875rem; }
 .edu-date {
   font-size: .7rem;
